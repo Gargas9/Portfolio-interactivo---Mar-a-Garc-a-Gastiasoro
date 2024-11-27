@@ -1,0 +1,864 @@
+:root {
+    --white:#ffffff;
+    --primary: #58E9E4;
+    --secondary: #339592;
+    --background: #1a2426;
+    --modal-background: #22292a;
+    --modal-background-opacity: #22292ae0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rajdhani",Arial, sans-serif;
+}
+
+/* FONTS */
+.rajdhani-light {
+    font-family: "Rajdhani", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.rajdhani-regular {
+    font-family: "Rajdhani", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.rajdhani-medium {
+    font-family: "Rajdhani", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+.rajdhani-semibold {
+    font-family: "Rajdhani", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+  
+.rajdhani-bold {
+    font-family: "Rajdhani", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+
+body {
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-color: var(--background);
+    font-family: "Rajdhani";
+    color: var(--white);
+    max-height: 100vh;
+}
+
+#animatedBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+/* ORGANIZACIÓN DEL GRID */
+.container {
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 8px;
+    height: 100vh;
+    position: relative; 
+}
+
+.div1, .div1-1, .div2, .div3, .div4, .div5, .div6 {
+    margin: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.marco{
+    background: var(--background);
+    border-radius: 7px;
+    padding: 1rem;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 7px 3px var(--primary);
+    overflow: auto;
+    margin: 0.5rem; 
+    height: 95%;
+   
+    transition: transform 0.3s;
+}
+
+
+.div1 {
+    grid-row: span 3 / span 3;
+    grid-row-start: 1;
+    grid-column: span 2 / span 2;
+    position: relative; 
+    left: -10rem;
+    width: calc(100% + 10rem);
+    padding-left: 5vw;
+} 
+
+.div1-1 {
+    grid-row-start: 4;
+    grid-column: span 2 / span 2;
+    margin-top: -1rem;
+    padding: 1rem;
+}
+
+.div2 {
+    grid-column: span 6 / span 6;
+    grid-row: span 4 / span 4;
+    grid-column-start: 3;
+}
+
+.div3 {
+    grid-row: span 6 / span 6;
+    grid-column: span 2 / span 2;
+    grid-column-start: 9;
+}
+
+.div4 {
+    grid-column: span 6 / span 6;
+    grid-row: span 6 / span 6;
+    grid-row-start: 5;
+}
+
+.div5 {
+    grid-row: span 4 / span 4;
+    grid-column-start: 7;
+    grid-row-start: 6;
+    grid-column: span 2 / span 2;
+}
+
+.div6 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 9;
+    grid-row-start: 8;
+    grid-column: span 2 / span 2;
+}
+
+
+/* HOVER DE LOS ELEMENTOS PRINCIPALES */
+.div1:hover{
+    border-radius: 60px;
+    background-color: var(--background);
+    box-shadow: 0 0 7px 4px var(--background);
+    transform:translateX(1rem);
+}
+
+.div1-1:hover{
+    transform:translateX(0.5rem);
+}
+
+.div3:hover{
+    border-radius: 7px;
+    background-color: var(--background);
+    box-shadow: 0 0 7px 4px var(--background);
+    transform:translateY(0.5rem);
+}
+
+.div5:hover{
+    border-radius: 7px;
+    background-color: var(--background);
+    box-shadow: 0 0 7px 4px var(--background);
+    transform: scale(1.1);
+}
+
+.div6:hover{
+    border-radius: 7px;
+    background-color: var(--background);
+    box-shadow: 0 0 7px 4px var(--background);
+    transform:translateY(0.5rem);
+}
+
+
+/* TITULOS Y CUERPO DE TEXTO */
+h1 {
+    font-family: "Rajdhani";
+    color: var(--white);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-family: "Rajdhani";
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: -0.3rem;
+}
+
+h3 {
+    font-family: "Rajdhani";
+    color: var(--secondary);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-family: "Rajdhani";
+    font-size: 14px;
+    color: var(--white);
+    line-height: 1.5;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bold{
+    font-weight: bold;
+    color: var(--primary);
+}
+
+
+/* PUNTERO */
+.puntero{
+    border-top: 3px solid var(--background);
+    border-bottom: 3px solid var(--background);
+    border-left: 2px solid var(--primary);
+    border-right: 2px solid var(--primary);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+
+    animation: girar 1.5s infinite;
+}
+
+.puntero2{
+    border: 2px solid var(--primary);
+    margin: 10%;
+    width: 20%;
+    height: auto;
+    pointer-events: none;
+}
+
+
+@keyframes girar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* TARJETA PERFIL */
+.div1 .marco {
+    padding-left: 0;
+    padding-right: 2rem;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: right;
+}
+
+.perfil{
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gift-yo{
+    width: 8rem;
+    height: auto;
+}
+
+.profile-info h1, .profile-info h2 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.texto-contenedor{
+    padding-top: 1.5rem;
+}
+
+.maquina-escribir {
+    margin: 0;
+}
+
+.cursor {
+    font-weight:bolder;
+    animation: parpadeo 1s step-end infinite;
+}
+
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
+
+
+
+/* SECCION DEL CHAT */
+.card {
+    background-color: var(--background);
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chat-container {
+    margin: auto;
+    height: 80%;
+    width: 98%;
+    overflow-y: auto;
+    padding: 1rem;
+    border: 1px solid var(--secondary);
+    border-radius: 7px;
+    margin-bottom: 0.7rem;
+}
+
+.chat-bubble {
+    background-color: color-mix(in srgb, var(--secondary) 60%, var(--background) 40%);
+    padding: 0.75rem;
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+    max-width: 80%;
+}
+
+.chat-bubble.user {
+    background-color: color-mix(in srgb, var(--secondary) 30%, var(--background) 70%);
+    margin-left: auto;
+}
+
+.chat-bubble p {
+    margin: 0;
+}
+
+.chat-buttons {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 0.5rem;
+    margin: 0rem 0.5rem 0.5rem 0.5rem;
+    height: 10%;
+}
+
+.chat-buttons button {
+    flex: 1;
+    background: var(--secondary);
+    border: 1px solid var(--primary);
+    color: var(--text);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-buttons button:hover {
+    background-color: color-mix(in srgb, var(--secondary) 40%, var(--background) 60%);
+}
+
+.chat-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.chat-image {
+    aspect-ratio: 1 / 1;
+    background: var(--modal-background);
+    border-radius: 5px;
+    max-width: 100%;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+
+/* MODAL DEL CHAT */
+.modalchat {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-background-opacity);
+}
+
+.modalchat-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    margin: 5rem auto 10rem auto;
+    padding: 1rem;
+    border: 1px solid var(--secondary);
+    width: 70%;
+    height: 80%;
+    max-width: 600px;
+    border-radius: 7px;
+}
+
+#modalchat-image {
+    border-radius: 7px;
+    width: 80%;
+    height: auto;
+}
+
+#modalchat-caption {
+    color: var(--text);
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+
+
+
+/* CV */
+.cv-section {
+    background: var(--background);
+    border-radius: 7px;
+    border: 1px solid var(--primary);
+
+    box-sizing:border-box;
+    width: 25rem;
+    height: 30rem;
+}
+
+.cv-content{
+    border-radius: 7px;
+    border: 1px solid var(--primary);
+    background-color: color-mix(in srgb, var(--primary) 40%, var(--background) 60%);
+    padding: 0rem 1rem 0rem 1rem;
+
+    display: block;
+    width: 100%;
+    height: 50rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+        h3{
+            color: var(--background);
+            text-align: center;
+            margin-top: 0.5rem;
+            margin-bottom: 0.2rem;
+
+        }
+        p{
+            margin-top: 0rem;
+            margin-bottom: 0rem;
+        }
+
+}
+
+
+
+/* GALERÍA PROYECTOS */
+.gallery .marco{
+    height: calc(100% - 2.5rem);
+}
+
+.gallery{
+    height: 100%;
+}
+
+.carousel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 50%;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* MODAL-GALERÍA*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-background-opacity);
+}
+
+.modal-content {
+    display: flex;
+    margin: 5% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    background-color: var(--modal-background);
+    border-radius: 7px;
+    box-shadow: 0 0 7px 3px var(--secondary);
+}
+
+.modal-image-container {
+    flex: 1;
+    margin: 1rem 2rem 1rem 1rem;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.modal-text {
+    flex: 1;
+    color: var(--text);
+}
+
+.close {
+    color: var(--primary);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column;
+    }
+    
+    .modal-image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* HABILIDADES */
+.div5 .marco{
+    padding: 0.7rem 0.5rem;
+    height: auto;
+}
+
+.skill {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0.2rem;
+}
+
+.skills-list{
+    border-radius: 7px;
+    border: 1px solid var(--primary);
+    background-color: color-mix(in srgb, var(--primary) 40%, var(--background) 60%);
+    padding: 0.5rem 1rem;
+    justify-content: center;
+}
+
+.skill-name {
+    margin-top: -0.5rem;
+    margin-bottom: 0.1rem;
+    font-size: 16px;
+}
+
+.skill-bar {
+    height: 8px;
+    background: var(--secondary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: var(--primary);
+    transition: width 1s ease-in-out;
+}
+
+
+
+/* CONTACTO */
+.div6 .marco{
+    height: auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+   
+}
+
+.contact-item {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+
+}
+
+.contact-item:hover {
+    transform: scale(1.5);
+}
+
+
+
+/* PRUEBA BRILLO MARCO CUADRADO HABILIDADES*/
+.efecto{
+    position: relative;
+}
+
+/* Before y After antes de hover */
+.efecto::before,
+.efecto::after {
+    border-radius: 7px;
+    box-shadow: 0 0 7px 3px var(--primary);
+    
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+  
+.efecto::before {
+    top: 0;
+    right: 0;
+    border-width:medium;
+    border-radius: 7px;
+}
+  
+.efecto::after {
+    left: 0;
+    bottom: 0;
+    border-width: thin;
+    border-radius: 7px;
+}
+  
+/* Before y After al hacer hover */
+.efecto:hover::before,
+.efecto:hover::after {
+    border-color: var(--primary);
+    border-radius: 7px;
+    box-shadow: 0 0 7px 3px var(--primary);
+    transition: border-color 0s, height 0.2s, width 0.2s, box-shadow 0s;
+    width: 100%;
+    height: 100%;
+}
+  
+.efecto:hover::before {
+    transition-delay: 0s, 0s, 0.2s;
+}
+  
+.efecto:hover::after {
+    transition-delay: 0.5s, 0.5s, 0.7s;
+}
+
+
+
+
+
+/* PRUEBA BRILLO MARCO CIRCULAR HABILIDADES*/
+.efecto2{
+    position: relative;
+}
+
+/* Before y After antes de hover */
+.efecto2::before,
+.efecto2::after {
+    border-radius: 7px;
+    box-shadow: 0 0 7px 3px var(--primary);
+    
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+  
+.efecto2::before {
+    top: 0;
+    right: 0;
+    border-width:medium;
+    border-radius: 7px;
+}
+  
+.efecto2::after {
+    left: 0;
+    bottom: 0;
+    border-width: thin;
+    border-radius: 7px;
+}
+  
+/* Before y After al hacer hover */
+.efecto2:hover::before,
+.efecto2:hover::after {
+    border-color: var(--primary);
+    border-radius: 100px;
+    box-shadow: 0 0 7px 3px var(--primary);
+    transition: border-color 0s, height 0.2s, width 0.2s, box-shadow 0s;
+    width: 100%;
+    height: 100%;
+}
+  
+.efecto2:hover::before {
+    transition-delay: 0s, 0s, 0.2s;
+}
+  
+.efecto2:hover::after {
+    transition-delay: 0.5s, 0.5s, 0.7s;
+}
+
+
+
+
+/* ANIMACIÓN-TEXTO-CONTACT-ITEM */
+.scale-up-center {
+	-webkit-animation: scale-up-center 5s cubic-bezier(0.175, 0.885, 0.320, 1.275) 5s infinite forwards;
+	        animation: scale-up-center 5s cubic-bezier(0.175, 0.885, 0.320, 1.275) 5s infinite forwards;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+  
+
+
+
+
+/*SCROLLBAR*/
+.scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide:hover,
+.scrollbar-hide:focus,
+.scrollbar-hide:active {
+    scrollbar-width: auto;
+    -ms-overflow-style: auto;
+}
+
+.scrollbar-hide:hover::-webkit-scrollbar,
+.scrollbar-hide:focus::-webkit-scrollbar,
+.scrollbar-hide:active::-webkit-scrollbar {
+    display: block;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.scrollbar-hide::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb {
+    background-color: var(--background);
+    border-radius: 20px;
+    border: 3px solid var(--background);
+}

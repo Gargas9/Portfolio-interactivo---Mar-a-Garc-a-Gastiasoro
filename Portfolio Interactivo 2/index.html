@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Interactivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">      
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+     <!-- Favicon -->
+     <link rel="icon" type="image/x-icon" href="img/Favicon.gif">
+</head>
+<body>
+    <canvas id="animatedBackground"></canvas>
+    <div class="container">
+        <div class="parent">
+            <div class="puntero">
+                <div class="puntero2"></div>
+            </div>
+            <!-- Profile Section - div1 -->
+            <div class="div1 scrollbar-hide">
+                <div class="marco">
+                    <div class="profile-content">
+                        <div class="profile-info">
+                            <div class="perfil">
+                                <div><h1>María García <br> Gastiasoro</h1></div>
+                                <div class="profile-image">
+                                    <img class="gift-yo" src="./img/Yo.gif"> 
+                                </div>
+                            </div>
+                            <h2>Diseñadora/Ilustradora</h2>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Section - div1-1 -->
+            <div class="div1-1 scrollbar-hide">
+                <div class="container-texto">
+                    <div id="texto-contenedor" class="texto-contenedor">
+                        <p id="texto-maquina" class="maquina-escribir">
+                            <span id="texto-mostrado"></span><span class="cursor">|</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Section - div4 -->
+            <div class="div4 scrollbar-hide">
+                <!-- <section class="gallery">
+                    <h2>GALERÍA DE PROYECTOS</h2>
+                    <div class="marco">
+                        <div class="carousel">
+                            <div        class="carousel-container">
+                                <div class="carousel-slide">
+                                 <img src="img/1Diseño.jpg" alt="Proyecto 1" class="carousel-image" data-title="Erain, Centro psikoterapia humanista gunea." data-description="Diseño de un folleto informativo de la empresa Erain para la promoción de un curso en Formación de Terapia Gestalt &quot;Acompañando procesos de crecimiento personal y colectivo&quot;.">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/2Diseño.jpg" alt="Proyecto 2" class="carousel-image" data-title="Meraki Bar &amp; Cocktails " data-description="Creación de logotipo para la apertura de un nuevo bar. Se desarrolla el logotipo, las cartas de desayuno y cocktail, y parte de la decoración del establecimiento.">
+                                </div>
+                                <div class="carousel-slide">
+                                 <img src="img/3Ilustracion.jpg" alt="Proyecto 3" class="carousel-image" data-title="Caperucita roja en el espacio." data-description="Proyecto de ilustración. Se versiona la conocida historia de Caperucita Roja ambientanda en el espacio. Se realiza una serie de imágenes para ilustrar el cuento y la maquetación del resultado en forma de libro.">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/4Ilustracion.jpg" alt="Proyecto 4" class="carousel-image" data-title="Encargo Sabina" data-description="Cliente solicita el diseño de una ilustración para generar un vinilo decorativo para su domicilio basado en su cantante favorito, Sabina.">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/5Diseño.jpg" alt="Proyecto 5" class="carousel-image" data-title="Trifasic"data-description="Diseño de la etiqueta de un vino fresco y afrutado. Se busca atraer a jóvenes amantes del vino a la cata de un producto delicioso y asequible para disfrutar junto a amigos y familiares.">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/6Diseño.jpg"  alt="Proyecto 6" class="carousel-image" data-title="Aina x Karol G" data-description="Este diseño surge del planteamiento de la colaboración de la marca Aina con la conocida cantante Karol G. Se plantea una serie de productos cosméticos para vender al público con la llegada de su disco &quot;KG0516&quot;.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+                <section class="gallery">
+                    <h2>GALERÍA DE PROYECTOS</h2>
+                    <div class="marco">
+                        <div class="carousel">
+                            <div class="carousel-container">
+                                <div class="carousel-slide">
+                                    <div class="image-container">
+                                        <img src="img/1Diseño.jpg" alt="Proyecto 1" class="carousel-image" data-title="Erain, Centro psikoterapia humanista gunea." data-description="Diseño de un folleto informativo de la empresa Erain para la promoción de un curso en Formación de Terapia Gestalt &quot;Acompañando procesos de crecimiento personal y colectivo&quot;.">
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <div class="image-container">
+                                        <img src="img/2Diseño.jpg" alt="Proyecto 2" class="carousel-image" data-title="Meraki Bar &amp; Cocktails " data-description="Creación de logotipo para la apertura de un nuevo bar. Se desarrolla el logotipo, las cartas de desayuno y cocktail, y parte de la decoración del establecimiento.">
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <div class="image-container">
+                                        <img src="img/3Ilustracion.jpg" alt="Proyecto 3" class="carousel-image" data-title="Caperucita roja en el espacio." data-description="Proyecto de ilustración. Se versiona la conocida historia de Caperucita Roja ambientanda en el espacio. Se realiza una serie de imágenes para ilustrar el cuento y la maquetación del resultado en forma de libro.">
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <div class="image-container">
+                                        <img src="img/4Ilustracion.jpg" alt="Proyecto 4" class="carousel-image" data-title="Encargo Sabina" data-description="Cliente solicita el diseño de una ilustración para generar un vinilo decorativo para su domicilio basado en su cantante favorito, Sabina.">
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <div class="image-container">
+                                        <img src="img/5Diseño.jpg" alt="Proyecto 5" class="carousel-image" data-title="Trifasic" data-description="Diseño de la etiqueta de un vino fresco y afrutado. Se busca atraer a jóvenes amantes del vino a la cata de un producto delicioso y asequible para disfrutar junto a amigos y familiares.">
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <div class="image-container">
+                                        <img src="img/6Diseño.jpg" alt="Proyecto 6" class="carousel-image" data-title="Aina x Karol G" data-description="Este diseño surge del planteamiento de la colaboración de la marca Aina con la conocida cantante Karol G. Se plantea una serie de productos cosméticos para vender al público con la llegada de su disco &quot;KG0516&quot;.">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Modal para la imagen-->
+                <div id="imageModal" class="modal">
+                    <div class="modal-content efecto">
+                        <span class="close">&times;</span>
+                        <div class="modal-image-container">
+                            <img src="" alt="" id="modalImage" class="modal-image">
+                        </div>
+                        <div class="modal-text">
+                            <h3 id="modalTitle"></h3>
+                            <p id="modalDescription"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section - div5 -->
+            <div class="div5 scrollbar-hide">
+                <h2>HABILIDADES</h2>
+                <div class="marco">
+                    <div class="skills-list efecto">
+                    <div class="skill">
+                        <div class="skill-name">Illustrator</div>
+                        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Photoshop</div>
+                        <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Indesing</div>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Premiere</div>
+                        <div class="skill-bar"><div class="skill-level" style="width: 60%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">HTML + CSS + JS</div>
+                        <div class="skill-bar"><div class="skill-level" style="width: 50%"></div></div>
+                    </div>
+                    </div>
+                </div>    
+            </div>
+
+
+            <!-- Chat Section - div2 -->
+            <div class="div2 scrollbar-hide">
+                <h2>ROBNY</h2>
+                <div class="marco">
+                    <div class="card">
+                            <div id="chat-container" class="chat-container">
+                                <!-- Los mensajes del chat van aquí-->
+                            </div>
+                            <div id="options-container" class="chat-buttons">
+                                <!-- Botones de opciones del chat -->
+                            </div>
+                    </div>
+                
+                    <template id="message-template">
+                        <div class="chat-bubble">
+                            <p></p>
+                            <img class="chat-image" style="display: none;">
+                        </div>
+                    </template>
+                
+                    <div id="chatmodal" class="modalchat">
+                        <div class="modalchat-content efecto">
+                            <img id="modalchat-image" src="" alt="Imagen ampliada">
+                            <p id="modalchat-caption"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CV Section - div3 -->
+            <div class="div3 scrollbar-hide">
+                <h2>CV</h2>
+                <div class="marco scrollbar-hide">  
+                    <div class="cv-content scrollbar-hide">
+                    <h3>EXPERIENCIA</h3>
+                 <p>• <span class="bold">Micolet Web SL.</span>  Diseño de newsletters, contenido web y de rrss, y soportes de cartelería para tiendas. (2021 - 2024)<br>
+                    PRÁCTICAS PROFESIONALES:<br>
+                    • Profesora de Dibujo y  Educación Plástica Visual, también participando en actividades extraescolares y de apoyo a la diversidad.  - 120 horas <span class="bold">IES Valentín Turienzo</span>   (2022)<br>
+                    • Diseñadora de newsletters y contenido web.  - 3 meses <span class="bold">Micolet Web SL (2021)</span><br>
+                    • Diseño gráfico para clientes de distintos sectores de mercado. - 200 horas <span class="bold">Bobysuh Creative</span> (2021)<br>
+                    • Diseño gráfico de Identidad Visual y contenido en rrss para clientes del mundo de la música.  - 335 horas (2020) <span class="bold">One Star, Agencia de publicidad.</span></p>
+                    <h3>EDUCACIÓN</h3>
+                    <p>• Máster en Programación para Creativos.
+                    LABASAD - Barcelona School of Arts and Design, modalidad online. (2023-2024)<br>
+                    • Máster Universitario en formación del profesorado Universidad Nebrija, modalidad online. Especializada en Artes Plásticas y Visuales (2021-2022)<br>
+                    • Máster en Diseño 2D, 3D y Web. Mass Media, Deusto. País Vasco. (2019 - 2021)<br>
+                    • Grado en Creación y Diseño; con Minor de Diseño Gráfico y minor de Ilustración. Universidad del País Vasco, Leioa.  (2015-2019)<br>
+                    • Bachillerato de Artes Plásticas, Imagen y Diseño. I.E.S. Bernardino de Escalante, Laredo. Cantabria.
+                    (2013 - 2015)</p>
+                </div>
+                </div>
+            </div>
+
+           
+
+            <!-- Contact Section - div6 -->
+            <div class="div6 scrollbar-hide">
+                <h2 class="scale-up-center">CONTÁCTAME</h2>
+                <div class="marco">
+                    <div class="contact-grid">
+                        <div class="contact-item efecto2">
+                            <a href="https://www.linkedin.com/in/mar%C3%ADa-garc%C3%ADa-gastiasoro-a73ba7204/">
+                                <img src="./img/LinkedIn_1.svg">
+                            </a>
+                        </div>
+                        <div class="contact-item efecto2">
+                            <a href="https://workspace.google.com/intl/es/gmail/">
+                                <img src="./img/Correo.svg">
+                            </a>
+                        </div>
+                        <div class="contact-item efecto2">
+                            <a href="https://www.youtube.com/@mariagarciagastiasoro2293">
+                                <img src="./img/YouTube.svg">
+                            </a>
+                        </div>
+                        <div class="contact-item efecto2">
+                            <a href="https://auth.services.adobe.com/en_US/deeplink.html#/password">
+                                <img src="./img/Behance.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
